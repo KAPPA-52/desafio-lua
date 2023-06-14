@@ -1,0 +1,45 @@
+local nome = "Bandido"
+local descricao = "Prefere atacar e roubar pessoas indefesas a trabalhar "
+local horario = "Noite"
+local drop = "faca"
+
+-- status
+local ataquestatus = 8
+local defesastatus = 1
+local vidastatus = 6
+local inteligenciastatus = 2
+local velocidadestatus = 5
+local ataqueefeitostatus = 3
+
+local function barradeprogresso(status)
+local resultado = ""
+local cheio = "I"
+local vazio = "."
+for i = 1, 10 ,1 do
+if i <= status then
+resultado = resultado .. cheio
+
+else
+resultado = resultado .. vazio
+end
+end
+return resultado
+end
+
+print("====================================================")
+print("|")
+print("| " .. nome)
+print("| " ..descricao)
+print("| Horario favorito:" .. horario)
+print("| Quando morto, solta:" .. drop)
+print("|")
+print("|")
+print("| Atributos")
+print("| Ataque:          ".. barradeprogresso (ataquestatus))
+print("| Efeito do ataque: Sangramento ".. barradeprogresso (ataqueefeitostatus))
+print("| Vida:            ".. barradeprogresso (vidastatus))
+print("| Velocidade:      ".. barradeprogresso (velocidadestatus))
+print("| Defesa:          ".. barradeprogresso (defesastatus))
+print("| Inteligencia:    ".. barradeprogresso (inteligenciastatus))
+print("|")
+print("====================================================")
