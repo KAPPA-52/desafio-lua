@@ -1,0 +1,118 @@
+
+os.execute("chcp 65001")
+-- informações
+local nome = "Bandido"
+local descricao = "Prefere atacar e roubar pessoas indefesas a trabalhar, foge das lutas. "
+local horario = " Noite"
+local drop = " Faca"
+local historia = " Uma pessoa preguiçosa que não queria trabalhar, até que percebeu que podia tomar coisas dos indefesos."
+local barra = "|"
+-- status
+local ataquestatus = 8
+local defesastatus = 1
+local defesaefeitostatus = 1
+local efeitodef = "magia"
+local vidastatus = 6
+local inteligenciastatus = 4
+local velocidadestatus = 5
+local ataqueefeitostatus = 3
+local efeitoatk = "Sangramento"
+local separarfolha = "====================================================================================================================="
+
+
+local function nivel(status)
+local resultado = ""
+local cheio = "■"
+local vazio = "□"
+for i = 1, 10 ,1 do
+if i <= status then
+resultado = resultado .. cheio
+
+else
+resultado = resultado .. vazio
+end
+end
+return resultado
+end
+
+print("1/2" ..separarfolha)
+print(barra)
+print(barra .." Dados da criatura")
+print(barra .. nome)
+print(barra ..descricao)
+print(barra .." Horario favorito:" .. horario)
+print(barra .." Quando morto, solta:" .. drop)
+print(barra .. historia)
+print(barra)
+print(barra)
+print("2/2".. separarfolha)
+print(barra)
+print(barra .." Estatisricas: ")
+print(barra .." Ataque:          ".. nivel (ataquestatus))
+print(barra .." Efeito do ataque:" .. efeitoatk .. " ".. nivel (ataqueefeitostatus))
+print(barra .." Vida:            ".. nivel (vidastatus))
+print(barra .." Velocidade:      ".. nivel (velocidadestatus))
+print(barra .." Defesa:          ".. nivel (defesastatus))
+print(barra .." Resitente a:     " .. efeitodef .. "       ".. nivel (defesaefeitostatus))
+print(barra .." Inteligencia:    ".. nivel (inteligenciastatus))
+print(barra)
+print(separarfolha .."===")
+=======
+os.execute("chcp 65001")
+-- informações
+local nome = "Bandido"
+local descricao = "Prefere atacar e roubar pessoas indefesas a trabalhar "
+local horario = " Noite"
+local drop = " faca"
+local historia = " Uma pessoa preguiçosa que não queria trabalhar, até que percebeu que podia tomar coisas dos indefesos"
+-- status
+local ataquestatus = 8
+local defesastatus = 1
+local defesaefeitostatus = 1
+local efeitodef = "magia"
+local vidastatus = 6
+local inteligenciastatus = 2
+local velocidadestatus = 5
+local ataqueefeitostatus = 3
+local efeitoatk = "Sangramento"
+local separarfolha = "====================================================================================================================="
+
+
+local function nivel(status)
+local resultado = ""
+local cheio = "■"
+local vazio = "□"
+for i = 1, 10 ,1 do
+if i <= status then
+resultado = resultado .. cheio
+
+else
+resultado = resultado .. vazio
+end
+end
+return resultado
+end
+
+print("1/2" ..separarfolha)
+print("|")
+print("| Dados da criatura")
+print("| " .. nome)
+print("| " ..descricao)
+print("| Horario favorito:" .. horario)
+print("| Quando morto, solta:" .. drop)
+print("|".. historia)
+print("|")
+print("|")
+print("2/2"..separarfolha)
+print("|")
+print("| Estatisricas: ")
+print("| Ataque:          ".. nivel (ataquestatus))
+print("| Efeito do ataque:" .. efeitoatk .. " ".. nivel (ataqueefeitostatus))
+print("| Vida:            ".. nivel (vidastatus))
+print("| Velocidade:      ".. nivel (velocidadestatus))
+print("| Defesa:          ".. nivel (defesastatus))
+print("| Resitente a:     " .. efeitodef .. "       ".. nivel (defesaefeitostatus))
+print("| Inteligencia:    ".. nivel (inteligenciastatus))
+print("|")
+print(separarfolha.."===")
+>>>>>>> f3738e27fdedc372fdd196429559ad4e9bd37517
